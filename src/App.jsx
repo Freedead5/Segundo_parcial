@@ -9,6 +9,9 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Dashboard from './pages/Dashboard'
 import ShippingDetails from './pages/ShippingDetails'
+import PurchaseList from './components/user/PurchaseList';
+import UploadReceipt from './components/user/UploadReceipt';
+
 import './App.css'
 
 function App() {
@@ -21,6 +24,8 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/shipping" element={<ShippingDetails />} />
             <Route path="/shipping/:purchaseId" element={<ShippingDetails />} />
+            <Route path="/purchases" element={<PurchaseList />} />
+            <Route path="/upload-receipt/:purchaseId" element={<UploadReceipt />} />
           </Routes>
         </main>
         <Footer />
